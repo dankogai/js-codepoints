@@ -1,0 +1,28 @@
+{
+  "name": "js-codepoints",
+  "version": "0.0.1",
+  "description": "make your javascript handle unicode codepoints more correctly",
+  "main": "codepoints.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+      "mocha" : "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dankogai/js-codepoints"
+  },
+  "keywords": [
+    "ES5",
+    "ES6",
+    "Unicode"
+  ],
+  "author": "Dan Kogai",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "c66d45022c621816fe8c7d0b014120a7fe225e1a"
+}
