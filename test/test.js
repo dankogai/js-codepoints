@@ -25,6 +25,12 @@ if (this['window'] !== this) {
         it('"' + yoshinoya + '".codePointAt(42) // out of range', 
            ok(isNaN( yoshinoya.codePointAt(42) )));
     });
+    describe('String.prototype.codePointsOf()', function(){
+        it('"' + yoshinoya + '".codePointsOf() === 3', 
+           eq(yoshinoya.codePointsOf(), 3));
+        it('吉野家".codePointsOf() === 3', 
+           eq("吉野家".codePointsOf(), 3));
+    });
     if (Object.defineProperty) describe(
         'String.prototype.codepoints', function(){
             it('"' + yoshinoya + '".codepoints === 3', 

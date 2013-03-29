@@ -24,11 +24,12 @@
     var re_uchars = /([\uD800-\uDBFF][\uDC00-\uDFFFF]|[\S\s])/g;
     install(RegExp, 'RE_UCHARS', re_uchars);
     // number of codepoints in the string -- needs ES5
+    install(String.prototype, 'codePointsOf', function() {
+        return this.replace(re_uchars, '_').length;
+    });
     if (defineProperty !== dummyfun) {
         defineProperty(String.prototype, 'codepoints', {
-            get: function() {
-                return this.replace(re_uchars, '_').length;
-            }
+            get: function() { return this.codePointsOf() }
         });
     }
     install(String.prototype, 'forEachUChar', function(f, ctx) {
