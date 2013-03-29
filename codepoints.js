@@ -1,4 +1,6 @@
 /*
+ * $Id: codepoints.js,v 0.1 2013/03/29 06:12:16 dankogai Exp dankogai $
+ *
  * codepoints.js
  *
  *  (c) 2013 Dan Kogai
