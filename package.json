@@ -1,6 +1,6 @@
 {
   "name": "js-codepoints",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "make your javascript handle unicode codepoints more correctly",
   "main": "codepoints.js",
   "directories": {
