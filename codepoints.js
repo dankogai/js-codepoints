@@ -1,5 +1,5 @@
 /*
- * $Id: codepoints.js,v 0.3 2013/03/30 14:01:33 dankogai Exp dankogai $
+ * $Id: codepoints.js,v 0.4 2013/04/02 07:29:42 dankogai Exp dankogai $
  *
  * codepoints.js
  *
@@ -45,9 +45,7 @@
         });
     });
     install(String.prototype, 'toArrayOfUChars', function() {
-        var ret = [];
-        ('' + this).replace(re_uchars, function(cp) { ret.push(cp) });
-        return ret;
+        return ('' + this).match(re_uchars);
     });
     install(String.prototype, 'uCharAt', function(n) {
         return ('' + this).toArrayOfUChars()[n];
